@@ -1,0 +1,461 @@
+        <!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashu | Digital Business Coach</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --y:#FFD600;--y2:#FFF176;--y3:#FFFDE7;--yd:#F9A825;
+  --blk:#0D0D0D;--blk2:#1A1A1A;
+  --wh:#FFFFFF;--gr:#F5F5F5;--gr2:#EEEEEE;
+  --txt:#0D0D0D;--mut:#757575;--bdr:#E0E0E0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--wh);color:var(--txt);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+.wrapper{max-width:480px;margin:0 auto;padding-bottom:0}
+
+/* HERO */
+.hero{background:var(--blk);position:relative;overflow:hidden;padding-bottom:24px}
+.hero-top{display:flex;align-items:center;justify-content:space-between;padding:24px 24px 0}
+.hero-badge{background:var(--y);color:var(--blk);font-family:'DM Sans',sans-serif;font-size:10px;font-weight:800;letter-spacing:2px;padding:6px 14px;border-radius:4px;text-transform:uppercase}
+.hero-dot{width:10px;height:10px;border-radius:50%;background:var(--y);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,214,0,0.5)}50%{box-shadow:0 0 0 8px rgba(255,214,0,0)}}
+.hero-img-wrap{margin:20px 24px 0}
+.hero-img{width:100%;border-radius:16px 16px 0 0;display:block;object-fit:cover;max-height:380px;object-position:top;border:3px solid var(--y);border-bottom:none}
+.hero-name-block{background:var(--y);margin:0 24px;padding:20px 22px 18px;border-radius:0 0 16px 16px;position:relative}
+.hero-name-block h1{font-family:'DM Sans',sans-serif;font-size:26px;font-weight:800;color:var(--blk);line-height:1.1;letter-spacing:-0.5px}
+.hero-name-block .role{font-size:12px;font-weight:600;color:var(--blk2);letter-spacing:2px;text-transform:uppercase;margin-top:5px;opacity:0.7}
+.hero-arrow{position:absolute;right:22px;top:50%;transform:translateY(-50%);width:44px;height:44px;background:var(--blk);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--y);font-size:22px;cursor:pointer;transition:transform 0.2s}
+.hero-arrow:hover{transform:translateY(-50%) scale(1.08)}
+
+/* TICKER */
+.ticker{background:var(--y);padding:10px 0;overflow:hidden;white-space:nowrap;border-top:2px solid var(--blk);border-bottom:2px solid var(--blk);margin-top:24px}
+.ticker-inner{display:inline-block;animation:tick 18s linear infinite}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-text{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:800;color:var(--blk);letter-spacing:1px;padding:0 28px;display:inline-block}
+.ticker-sep{display:inline-block;width:6px;height:6px;background:var(--blk);border-radius:50%;margin:0 4px;vertical-align:middle}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:2px solid var(--blk)}
+.stat{padding:22px 16px;text-align:center;border-right:2px solid var(--blk);background:var(--wh)}
+.stat:last-child{border-right:none}
+.stat .num{font-family:'DM Sans',sans-serif;font-size:28px;font-weight:800;color:var(--blk);line-height:1}
+.stat .lbl{font-size:11px;color:var(--mut);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+
+/* CTA */
+.cta-wrap{padding:24px 20px 0}
+.btn-main{width:100%;background:var(--blk);color:var(--y);border:2px solid var(--blk);border-radius:12px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:800;letter-spacing:1px;padding:18px 24px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:background 0.2s,color 0.2s,transform 0.15s;text-transform:uppercase}
+.btn-main:hover{background:var(--y);color:var(--blk);transform:translateY(-2px)}
+.btn-main:active{transform:scale(0.98)}
+.btn-main i{font-size:22px}
+
+/* PROMISE */
+.promise{margin:16px 20px 0;background:var(--y3);border:2px solid var(--y);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px}
+.promise-icon{width:42px;height:42px;flex-shrink:0;background:var(--y);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.promise h4{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:800;color:var(--blk);margin-bottom:3px}
+.promise p{font-size:12px;color:#5D4037;line-height:1.5}
+
+/* FEATURES */
+.features{padding:28px 20px 0}
+.features-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.features-head h2{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:800;color:var(--blk)}
+.features-head .tag{background:var(--blk);color:var(--y);font-size:10px;font-weight:800;padding:5px 12px;border-radius:4px;letter-spacing:1.5px;text-transform:uppercase}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.feat-card{background:var(--gr);border:1.5px solid var(--bdr);border-radius:14px;padding:18px 16px;transition:border-color 0.2s,transform 0.2s}
+.feat-card:hover{border-color:var(--blk);transform:translateY(-2px)}
+.feat-card .fi{font-size:28px;margin-bottom:10px;display:block}
+.feat-card h4{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:800;color:var(--blk);margin-bottom:5px}
+.feat-card p{font-size:12px;color:var(--mut);line-height:1.5}
+.feat-card.yl{background:var(--y);border-color:var(--y)}
+.feat-card.yl h4,.feat-card.yl p{color:var(--blk)}
+
+/* VIDEOS */
+.vid-section{margin:28px 0 0}
+.section-label{display:flex;align-items:center;gap:12px;padding:0 20px 16px}
+.section-label h2{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:800;color:var(--blk)}
+.section-label .vtag{background:var(--blk);color:var(--y);font-size:10px;font-weight:800;padding:5px 12px;border-radius:4px;letter-spacing:1.5px;text-transform:uppercase}
+.vid-track-wrap{overflow:hidden;width:100%}
+.vid-track{display:flex;gap:12px;padding:0 20px;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94)}
+.vid-item{flex:0 0 200px}
+.vid-item video{width:200px;height:340px;border-radius:14px;border:2px solid var(--blk);object-fit:cover;display:block}
+.vid-controls{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 0 4px}
+.vdot{width:8px;height:8px;border-radius:50%;background:var(--bdr);border:none;cursor:pointer;padding:0;transition:background 0.2s,transform 0.2s}
+.vdot.active{background:var(--blk);transform:scale(1.4)}
+
+/* FAQ */
+.faq-wrap{padding:28px 20px 0}
+.faq-wrap>.fh{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.faq-wrap>.fh h2{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:800;color:var(--blk)}
+.faq-wrap>.fh span{font-size:12px;color:var(--mut);font-weight:500}
+.faq-item{border:1.5px solid var(--bdr);border-radius:12px;margin-bottom:8px;overflow:hidden;background:var(--wh);transition:border-color 0.25s}
+.faq-item.open{border-color:var(--blk)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;cursor:pointer;gap:12px}
+.faq-q-left{display:flex;align-items:center;gap:12px}
+.faq-num{width:28px;height:28px;border-radius:6px;background:var(--y);display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:800;color:var(--blk);flex-shrink:0}
+.faq-item.open .faq-num{background:var(--blk);color:var(--y)}
+.faq-qtxt{font-size:14px;font-weight:600;color:var(--blk)}
+.faq-arr{font-size:18px;color:var(--mut);transition:transform 0.3s;flex-shrink:0}
+.faq-item.open .faq-arr{transform:rotate(180deg)}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.2s;font-size:14px;color:var(--mut);line-height:1.65;padding:0 18px}
+.faq-item.open .faq-ans{max-height:180px;padding-bottom:16px}
+
+/* FOOTER */
+.footer{margin:28px 0 0;background:var(--blk);border-radius:0;padding:28px 24px;color:var(--wh)}
+.footer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.footer-logo{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:800;color:var(--y)}
+.footer-tag{font-size:11px;color:#888;font-weight:500;letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+.footer-links{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.footer-links a{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:8px 14px;color:#ccc;font-size:13px;font-weight:500;text-decoration:none;transition:background 0.2s,color 0.2s,border-color 0.2s}
+.footer-links a:hover{background:var(--y);color:var(--blk);border-color:var(--y)}
+.footer-div{height:1px;background:rgba(255,255,255,0.08);margin-bottom:16px}
+.footer-copy{font-size:11px;color:#444}
+
+/* MODAL */
+#modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);z-index:9999;justify-content:center;align-items:flex-end}
+.modal-box{background:var(--wh);border-radius:24px 24px 0 0;width:100%;max-width:480px;animation:slideUp 0.38s cubic-bezier(0.34,1.4,0.64,1);overflow:hidden}
+@keyframes slideUp{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-header{background:var(--blk);padding:24px 24px 22px;display:flex;align-items:center;gap:14px}
+.modal-avatar{width:48px;height:48px;border-radius:12px;background:var(--y);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--blk);flex-shrink:0}
+.modal-header h3{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:800;color:var(--wh);margin-bottom:3px}
+.modal-header p{font-size:12px;color:#888}
+.modal-body{padding:22px 24px 32px}
+.modal-note{background:var(--y3);border:1.5px solid var(--y);border-radius:10px;padding:11px 14px;margin-bottom:18px;display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#5D4037;line-height:1.5}
+.modal-note i{color:var(--yd);font-size:16px;flex-shrink:0;margin-top:1px}
+.form-lbl{font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:7px;display:flex;align-items:center;gap:6px}
+.inp-wrap{position:relative;margin-bottom:14px}
+.inp-ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:18px;pointer-events:none}
+input[type=text],input[type=number],input[type=tel]{width:100%;padding:14px 14px 14px 44px;background:var(--gr);border:1.5px solid var(--bdr);color:var(--txt);border-radius:10px;font-size:15px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.25s,box-shadow 0.25s}
+input:focus{border-color:var(--blk);box-shadow:0 0 0 3px rgba(13,13,13,0.08)}
+input::placeholder{color:#BDBDBD}
+.modal-close{text-align:center;margin-top:14px;cursor:pointer;color:var(--mut);font-size:13px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:5px;transition:color 0.2s}
+.modal-close:hover{color:var(--blk)}
+
+/* FLOATING WA */
+.wa-btn{position:fixed;bottom:28px;right:20px;width:58px;height:58px;background:#25D366;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:999;box-shadow:0 4px 20px rgba(37,211,102,0.45);animation:wabob 3s ease-in-out infinite;transition:transform 0.2s}
+@keyframes wabob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.wa-btn:hover{animation:none;transform:scale(1.12)}
+.wa-btn i{font-size:28px;color:#fff}
+.wa-ring{position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,0.4);animation:waring 2s ease infinite}
+@keyframes waring{0%{transform:scale(1);opacity:0.8}100%{transform:scale(1.5);opacity:0}}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(20px);transition:opacity 0.55s,transform 0.55s}
+.rev.in{opacity:1;transform:none}
+</style>
+</head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '900450759691594');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=900450759691594&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<body>
+<div class="wrapper">
+
+  <!-- HERO -->
+  <div class="hero rev">
+    <div class="hero-top">
+      <div class="hero-badge">📈 Digital Coach</div>
+      <div class="hero-dot"></div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="https://i.ibb.co/NDMnCK0/Whats-App-Image-2026-05-18-at-21-23-01.jpg" alt="Syed Khalid Saleem" class="hero-img">
+    </div>
+    <div class="hero-name-block">
+      <h1>Ashu</h1>
+      <div class="role">⚡ Digital Business Coach</div>
+      <div class="hero-arrow" onclick="toggleModal()">
+        <i class="ti ti-arrow-right"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- TICKER -->
+  <div class="ticker rev">
+    <div class="ticker-inner">
+      <span class="ticker-text">🚀 JOIN NOW</span><span class="ticker-sep"></span>
+      <span class="ticker-text">💰 EARN FROM HOME</span><span class="ticker-sep"></span>
+      <span class="ticker-text">📱 SMARTPHONE SE KARO</span><span class="ticker-sep"></span>
+      <span class="ticker-text">✅ 100% LEGAL</span><span class="ticker-sep"></span>
+      <span class="ticker-text">🎓 5000+ STUDENTS</span><span class="ticker-sep"></span>
+      <span class="ticker-text">🤝 FULL SUPPORT</span><span class="ticker-sep"></span>
+      <span class="ticker-text">🚀 JOIN NOW</span><span class="ticker-sep"></span>
+      <span class="ticker-text">💰 EARN FROM HOME</span><span class="ticker-sep"></span>
+      <span class="ticker-text">📱 SMARTPHONE SE KARO</span><span class="ticker-sep"></span>
+      <span class="ticker-text">✅ 100% LEGAL</span><span class="ticker-sep"></span>
+      <span class="ticker-text">🎓 5000+ STUDENTS</span><span class="ticker-sep"></span>
+      <span class="ticker-text">🤝 FULL SUPPORT</span><span class="ticker-sep"></span>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats rev">
+    <div class="stat"><div class="num">5K+</div><div class="lbl">🎓 Students</div></div>
+    <div class="stat"><div class="num">3yr+</div><div class="lbl">💼 Exp</div></div>
+    <div class="stat"><div class="num">100%</div><div class="lbl">🤝 Support</div></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap rev">
+    <button class="btn-main" onclick="toggleModal()">
+      <span>📲 Contact Us Now</span>
+      <i class="ti ti-arrow-right"></i>
+    </button>
+  </div>
+
+  <!-- PROMISE -->
+  <div class="promise rev">
+    <div class="promise-icon">⚡</div>
+    <div>
+      <h4>Free Consultation Available</h4>
+      <p>Talk directly before joining — no pressure, full clarity guaranteed. ✅</p>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features rev">
+    <div class="features-head">
+      <h2>Why Join? 🔥</h2>
+      <div class="tag">Top Reasons</div>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card yl">
+        <span class="fi">📱</span>
+        <h4>Sirf Smartphone</h4>
+        <p>Koi bhi device, koi investment nahi chahiye.</p>
+      </div>
+      <div class="feat-card">
+        <span class="fi">⏰</span>
+        <h4>2-3 Ghante Kafi</h4>
+        <p>Part-time karke bhi strong income possible hai.</p>
+      </div>
+      <div class="feat-card">
+        <span class="fi">🛡️</span>
+        <h4>100% Legal</h4>
+        <p>Government registered, full transparency guaranteed.</p>
+      </div>
+      <div class="feat-card yl">
+        <span class="fi">🎧</span>
+        <h4>Full Support</h4>
+        <p>Team hamesha saath jab tak seekh nahi jaate.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEOS -->
+  <div class="vid-section rev">
+    <div class="section-label">
+      <h2>🎥 Real Proofs</h2>
+      <div class="vtag">Verified</div>
+    </div>
+    <div class="vid-track-wrap">
+      <div class="vid-track" id="vtrack">
+        <div class="vid-item"><video controls playsinline><source src="https://d1yei2z3i6k35z.cloudfront.net/13597760/6889af1a956fa_VID-20250718-WA00351.mp4"></video></div>
+        <div class="vid-item"><video controls playsinline><source src="https://d1yei2z3i6k35z.cloudfront.net/13597760/6889af5fb683b_VID-20250730-WA0012.mp4"></video></div>
+        <div class="vid-item"><video controls playsinline><source src="https://d1yei2z3i6k35z.cloudfront.net/13597760/6889aff200492_VID-20250718-WA00321.mp4"></video></div>
+      </div>
+    </div>
+    <div class="vid-controls" id="vdots">
+      <button class="vdot active"></button>
+      <button class="vdot"></button>
+      <button class="vdot"></button>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-wrap rev">
+    <div class="fh">
+      <h2>❓ FAQs</h2>
+      <span>Common questions</span>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <div class="faq-q-left"><div class="faq-num">1</div><span class="faq-qtxt">⚖️ Kya ye kaam legal hai?</span></div>
+        <i class="ti ti-chevron-down faq-arr"></i>
+      </div>
+      <div class="faq-ans">✅ Haan, ye 100% genuine aur government registered platform hai. Hum sikhate hain smartphone ka sahi use karke paise kaise kamayein.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <div class="faq-q-left"><div class="faq-num">2</div><span class="faq-qtxt">📋 Join karne ke liye kya chahiye?</span></div>
+        <i class="ti ti-chevron-down faq-arr"></i>
+      </div>
+      <div class="faq-ans">📱 Sirf aapka Smartphone, Internet aur din ke 2-3 ghante ka waqt. Koi special skill ki zaroorat nahi.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <div class="faq-q-left"><div class="faq-num">3</div><span class="faq-qtxt">💰 Paisa kaise milega?</span></div>
+        <i class="ti ti-chevron-down faq-arr"></i>
+      </div>
+      <div class="faq-ans">🏦 Aap jo bhi income generate karenge wo seedha aapke bank account mein aayegi. Full transparency ke saath.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <div class="faq-q-left"><div class="faq-num">4</div><span class="faq-qtxt">😟 Mujhse nahi hua toh?</span></div>
+        <i class="ti ti-chevron-down faq-arr"></i>
+      </div>
+      <div class="faq-ans">🤝 Aapko step-by-step training milegi. Jab tak aap seekh nahi jaate, main aur meri team aapko support karenge.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <div class="faq-q-left"><div class="faq-num">5</div><span class="faq-qtxt">🚀 Shuruat kaise karein?</span></div>
+        <i class="ti ti-chevron-down faq-arr"></i>
+      </div>
+      <div class="faq-ans">👇 Niche diye gaye button par click karein aur apni details bharein, main khud aapse WhatsApp par contact karunga.</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer rev">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Ashu</div>
+        <div class="footer-tag">🎯 Your Success, My Mission 💪</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://wa.me/919990537215" target="_blank"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>
+      <a href="#" onclick="toggleModal();return false;"><i class="ti ti-mail"></i> Contact</a>
+      <a href="#"><i class="ti ti-shield-check"></i> Privacy</a>
+    </div>
+    <div class="footer-div"></div>
+    <div class="footer-copy">© 2026 Ashu. All rights reserved.</div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" onclick="handleOvr(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-avatar"><i class="ti ti-user-circle"></i></div>
+      <div>
+        <h3>✍️ Enter Your Details</h3>
+        <p>📞 I will personally connect with you</p>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-note">
+        <i class="ti ti-info-circle"></i>
+        <span>🔒 Your details are safe with me. I will contact you on WhatsApp within 24 hours. ⏱️</span>
+      </div>
+      <div class="form-lbl"><i class="ti ti-user"></i> Your Full Name</div>
+      <div class="inp-wrap">
+        <i class="ti ti-user inp-ico"></i>
+        <input type="text" id="n" placeholder="e.g. Rahul Sharma">
+      </div>
+      <div class="form-lbl"><i class="ti ti-calendar"></i> Your Age</div>
+      <div class="inp-wrap">
+        <i class="ti ti-calendar inp-ico"></i>
+        <input type="number" id="a" placeholder="e.g. 22">
+      </div>
+      <div class="form-lbl"><i class="ti ti-brand-whatsapp"></i> WhatsApp Number</div>
+      <div class="inp-wrap">
+        <i class="ti ti-phone inp-ico"></i>
+        <input type="tel" id="p" placeholder="e.g. 9876543210">
+      </div>
+      <button class="btn-main" onclick="send()" style="margin-top:4px">
+        <span>🚀 Send on WhatsApp</span>
+        <i class="ti ti-brand-whatsapp"></i>
+      </button>
+      <div class="modal-close" onclick="toggleModal()">
+        <i class="ti ti-x"></i> Close
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING WA -->
+<button class="wa-btn" onclick="openWA()" aria-label="WhatsApp">
+  <div class="wa-ring"></div>
+  <i class="ti ti-brand-whatsapp"></i>
+</button>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement,was=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(el=>el.classList.remove('open'));
+    if(!was)item.classList.add('open');
+  });
+});
+
+function toggleModal(){
+  const m=document.getElementById('modal');
+  m.style.display=m.style.display==='flex'?'none':'flex';
+}
+function handleOvr(e){if(e.target===document.getElementById('modal'))toggleModal();}
+
+function send(){
+  const name=document.getElementById('n').value.trim();
+  const age=document.getElementById('a').value.trim();
+  const phone=document.getElementById('p').value.trim();
+  if(!name||!age||!phone){alert("Please fill all details");return;}
+  const msg=`hi ashu mam,%0A%0AMujhe aapke program mein join karna hai!%0A%0A*My Details:*%0AName: ${name}%0AAge: ${age}%0AWhatsApp: ${phone}`;
+  window.open(`https://wa.me/919990537215?text=${msg}`,'_blank');
+}
+function openWA(){window.open('https://wa.me/919990537215','_blank');}
+
+// VIDEO INFINITE LOOP
+const track=document.getElementById('vtrack');
+const itemW=200+12;
+const total=3;
+let cur=0,transitioning=false;
+const origItems=Array.from(track.children);
+origItems.forEach(item=>track.appendChild(item.cloneNode(true)));
+origItems.slice().reverse().forEach(item=>track.insertBefore(item.cloneNode(true),track.firstChild));
+let pos=total;
+track.style.transition='none';
+track.style.transform=`translateX(${-pos*itemW}px)`;
+
+function goSlide(idx){
+  if(transitioning)return;
+  transitioning=true;
+  pos=total+idx;cur=idx;
+  track.style.transition='transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94)';
+  track.style.transform=`translateX(${-pos*itemW}px)`;
+  document.querySelectorAll('.vdot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+  track.querySelectorAll('video').forEach(v=>v.pause());
+}
+
+track.addEventListener('transitionend',()=>{
+  transitioning=false;
+  if(pos>=total*2){
+    track.style.transition='none';pos=total;cur=0;
+    track.style.transform=`translateX(${-pos*itemW}px)`;
+    document.querySelectorAll('.vdot').forEach((d,i)=>d.classList.toggle('active',i===0));
+  } else if(pos<total){
+    track.style.transition='none';pos=total*2-1;cur=total-1;
+    track.style.transform=`translateX(${-pos*itemW}px)`;
+    document.querySelectorAll('.vdot').forEach((d,i)=>d.classList.toggle('active',i===total-1));
+  }
+});
+
+document.querySelectorAll('.vdot').forEach((d,i)=>{d.onclick=()=>goSlide(i);});
+setInterval(()=>goSlide((cur+1)%total),4000);
+
+// REVEAL
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting)setTimeout(()=>e.target.classList.add('in'),i*80);
+  });
+},{threshold:0.06});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>              
